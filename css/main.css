@@ -1,0 +1,133 @@
+html {
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 80px;
+    text-align: center;
+}
+.container {
+    max-width: 1600px;
+    width: 100%;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+.skills {
+    padding: 50px 0;
+}
+.skills__grid-item {
+    /* background-color:  #F5F5F5; */
+    background-color: #ddd;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.skills__grid-image img {
+    max-width: 100%;
+}
+.skills__grid-content {
+    
+}
+.skills__grid-content h3 {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 80px;
+    color: #263238;  
+    margin: 0;
+}
+.skills__grid-content p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #8F95A5;
+    max-width: 435px;
+    width: 100%;
+}
+.skills__grid-content button {
+    width: 230px;
+    height: 60px;
+    background: #263238;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s all;
+}
+.skills__grid-content button:hover {
+    opacity: 0.8;
+}
+.speaking {
+    max-width: 435px;
+    max-height: 894px;
+}
+.writing {
+    max-width: 434px;
+    max-height: 531px;
+}
+.reading {
+    max-width: 435px;
+    max-height: 532px;
+}
+.listening {
+    max-width: 885px;
+    max-height: 343px;
+}
+/* Grid */
+.skills__grid {
+    display: grid;
+    gap: 30px;
+    grid-template-areas: "one two tree" "one four four";
+    justify-content: space-evenly;
+    align-items: stretch;
+}
+.speaking {
+    grid-area: one;
+}
+.writing {
+    grid-area: two;
+}
+.reading {
+    grid-area: tree;
+}
+.listening {
+    grid-area: four;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.listening .skills__grid-image {
+    order: 1;
+}
+@media screen and (max-width: 575px) {
+    .skills__grid {
+        grid-template-areas: 
+        "one two"
+        "tree four";
+    }
+    .listening {
+        display: block;
+    }
+}
+@media screen and (max-width: 320px) {
+    .skills__grid {
+        grid-template-areas: 
+        "one"
+        "two"
+        "tree"
+        "four";
+    }
+}
