@@ -8,9 +8,17 @@ body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
 }
-
+img {
+    width: 100%;
+}
 .header {
     margin-top: 53px;
+}
+.container {
+    max-width: 1400px;
+    width: 100%;
+    padding: 0 30px;
+    margin: 0 auto;
 }
 .menu {
     display: flex;
@@ -34,7 +42,6 @@ body {
     margin-top: 15px;
 }
 .menu ul li {
-    
 }
 .menu button {
     width: 220px;
@@ -46,14 +53,20 @@ body {
     font-size: 24px;
     line-height: 36px;
     color: #000000;
+    cursor: pointer;
+    transition: 0.3s all;
+}
+.menu button:hover {
+    opacity: 0.8;    
 }
 .content {
-    width: 1348px;
+    max-width: 1348px;
     display: flex;
     justify-content: space-between;
     margin-top: 50px;
 }
 .content__left {
+    max-width: 632px;
     padding-top: 7px;
 }
 .content__item {
@@ -77,7 +90,7 @@ body {
     margin-left: 43px;
 }
 .content p {
-    width: 560px;
+    max-width: 560px;
     height: 108px;
     font-weight: 400;
     font-size: 24px;
@@ -98,23 +111,28 @@ body {
     color: #FFFFFF;
     padding: 0;
     margin-top: 60px;
+    cursor: pointer;
+    transition: 0.3s all;
+}
+.content button:hover {
+    opacity: 0.8;    
 }
 .content__rigth {
     width: 661px;
     height: 661px;
+    margin-left: 8px;
 }
-
 h2 {
     font-weight: 600;
     font-size: 48px;
     line-height: 80px;
     text-align: center;
 }
-.container {
-    max-width: 1400px;
-    width: 100%;
-    padding: 0 30px;
-    margin: 0 auto;
+@media screen and (max-width: 992px) {
+    .content__rigth {
+        width: 460px;
+        height: 460px;
+    }
 }
 .skills {
     padding: 60px 0;
@@ -123,27 +141,22 @@ h2 {
 
 }
 .skills__grid-item {
-    /* background-color:  #F5F5F5; */
-    background-color: #ddd;
+    background-color:  #F5F5F5;
     padding: 25px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
 }
 .skills__grid-image img {
     max-width: 100%;
 }
 .skills__grid-content {
-    
 }
 .skills__grid-content h3 {
     font-weight: 600;
     font-size: 30px;
-    /* line-height: 80px; */
     color: #263238;  
     margin: 0;
-
 }
 .skills__grid-content p {
     font-weight: 400;
@@ -153,10 +166,8 @@ h2 {
     max-width: 380px;
     width: 100%;
     margin: 0;
-
 }
 .skills__grid-content button {
-    /* width: 230px; */
     height: 60px;
     background: #263238;
     border-radius: 5px;
@@ -168,11 +179,11 @@ h2 {
     border: none;
     cursor: pointer;
     transition: 0.3s all;
-
 }
 .skills__grid-content button:hover {
     opacity: 0.8;
 }
+/* Элемент 1 */
 .speaking {
     max-width: 435px;
     max-height: 894px;
@@ -191,15 +202,18 @@ h2 {
     width: 230px;
     margin: 18px 18px 0;
 }
+/* Элемент 2 */
 .writing {
     max-width: 434px;
     max-height: 531px;
     padding: 0 32px;
 }
 .writing img {
+    width: 293px;
+    height: 293px;
     position: relative;
     top: -5px;
-    left: 90px;
+    left: 91px;
 }
 .writ {
     position: relative;
@@ -215,9 +229,8 @@ h2 {
 .writ-bt {
     width: 218px;
     margin-top: 30px;
-    
 }
-
+/* Элемент 3 */
 .reading {
     max-width: 435px;
     max-height: 532px;
@@ -238,7 +251,7 @@ h2 {
     width: 218px;
     margin: 28px 12px;
 }
-
+/* Элемент 4 */
 .listening {
     max-width: 885px;
     max-height: 343px;
@@ -259,7 +272,6 @@ h2 {
     width: 218px;
     margin: 23px 12px;
 }
-
 /* Grid */
 .skills__grid {
     height: 895px;
@@ -308,7 +320,6 @@ h2 {
     }
 }
 .AboutUs {
-
 }
 .about {
     display: flex;
@@ -328,12 +339,10 @@ h2 {
     line-height: 30px;
     color: #8F95A5;
 }
-
 .item__about {
     width: 620px;
     display: flex;
     padding-top: 21px;
-    /* justify-content: space-between; */
 }
 .item__about h2 {
     align-items: center;
@@ -344,7 +353,6 @@ h2 {
     text-align: center;
 }
 .first {
-    
 }
 .twoo {
     padding-left: 145px;
@@ -353,6 +361,160 @@ h2 {
     padding-left: 95px;
 }
 .about__rigth img {
+    width: 500px;
+    height: 500px;
     margin-right: 10px;
 }
-
+.pricing {
+    padding-top: 142px;
+}
+.pricing__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+.pricing__grid h3 {
+    font-weight: 600;
+    font-size: 30px;
+    color: #263238;
+    margin: 0;
+    margin-top: 35px;
+}
+.pricing__grid p {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #8F95A5;
+    margin: 20px 0;
+}
+.pricing__grid button {
+    width: 240px;
+    height: 45px;
+    background: #EEEEEE;
+    border-radius: 5px;
+    border: none;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 45px;
+    text-align: center;
+    color: #263238;
+    margin-top: 10px;
+    letter-spacing: 2.0px;
+    cursor: pointer;
+}
+.pricing__grid button span {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    color: #546269;
+}
+.self img {
+    width: 311px;
+    height: 311px;
+    margin: 18px 0 0 25px;
+}
+.classes img {
+    width: 391px;
+    height: 283px;
+    margin: 42px 0 0 21px;
+}
+.classes h3 {
+    margin: 0;
+    padding: 36px 0 0 24px;
+}
+.classes p {
+    padding: 6px 0 0 24px;
+}
+.classes button {
+    margin: 35px 0 0 24px;
+}
+.personal img {
+    width: 340px;
+    height: 340px;
+    margin: 18px 0 0 48px;
+}
+.personal h3 {
+    margin: 0;
+    padding-top: 4px;
+}
+.personal button {
+    margin-top: 40px;
+}
+.personal {
+}
+.container1 {
+    max-width: 1400px;
+    margin: 0 auto;
+    margin-top: 251px;
+}
+.us {
+    display: flex;
+    justify-content: space-between;
+}
+.us img {
+    width: 477px;
+    height: 429px;
+    margin: 9px 0 0 13px;
+}
+.contact__right {
+    max-width: 800px;
+}
+.contact__right h2 {
+    text-align: left;
+}
+.contact__right p {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #8F95A5;
+}
+.contact__form {
+    padding-top: 27px;
+}
+.contact__form1 {
+    width: 450px;
+    height: 80px;
+    border: 1px solid #8F95A5;
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.6px;
+    color: #8F95A5;
+    padding-left: 33px;
+}
+.contact__form2 {
+    width: 264px;
+    height: 80px;
+    background: #263238;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    color: #FFFFFF;
+    letter-spacing: 2.0px;
+    cursor: pointer;
+}
+.line {
+    margin-top: 131px;
+    width: 1338px;
+    height: 1px;
+    background: #C4C4C4;
+}
+.britlex {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.britlex img {
+    width: 106px;
+    height: 27px;
+    margin-top: 13px;
+    margin-left: 3px;
+}
+.britlex p {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    color: #8F95A5;
+}
